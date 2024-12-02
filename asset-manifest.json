@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/XAlexandrX/HomeWork/static/css/main.145914ce.css",
-    "main.js": "/XAlexandrX/HomeWork/static/js/main.a8fc1c40.js",
-    "static/js/787.66cb4309.chunk.js": "/XAlexandrX/HomeWork/static/js/787.66cb4309.chunk.js",
-    "static/media/avatar.png": "/XAlexandrX/HomeWork/static/media/avatar.d947cb9d0d13765666b6.png",
-    "index.html": "/XAlexandrX/HomeWork/index.html",
-    "main.145914ce.css.map": "/XAlexandrX/HomeWork/static/css/main.145914ce.css.map",
-    "main.a8fc1c40.js.map": "/XAlexandrX/HomeWork/static/js/main.a8fc1c40.js.map",
-    "787.66cb4309.chunk.js.map": "/XAlexandrX/HomeWork/static/js/787.66cb4309.chunk.js.map"
+    "main.css": "/github.io/HomeWork/static/css/main.690ea848.css",
+    "main.js": "/github.io/HomeWork/static/js/main.1db98cdb.js",
+    "static/js/787.66cb4309.chunk.js": "/github.io/HomeWork/static/js/787.66cb4309.chunk.js",
+    "static/media/avatar.png": "/github.io/HomeWork/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/github.io/HomeWork/index.html",
+    "main.690ea848.css.map": "/github.io/HomeWork/static/css/main.690ea848.css.map",
+    "main.1db98cdb.js.map": "/github.io/HomeWork/static/js/main.1db98cdb.js.map",
+    "787.66cb4309.chunk.js.map": "/github.io/HomeWork/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.145914ce.css",
-    "static/js/main.a8fc1c40.js"
+    "static/css/main.690ea848.css",
+    "static/js/main.1db98cdb.js"
   ]
 }
