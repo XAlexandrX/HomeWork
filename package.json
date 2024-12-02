@@ -1,8 +1,8 @@
 {
   "name": "hws2",
-  "homepage": "https://xalexandrx.github.io/HomeWork/",
+  "homepage": "https://XAlexandrX.github.io/HomeWork",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
