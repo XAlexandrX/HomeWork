@@ -1,36 +1,23 @@
 .button {
-}
-
-.disabled {
-}
-
-.secondary {
+    /* стили для кнопки */
 }
 
 .default {
+    /* стили для кнопки по умолчанию */
+}
+
+.disabled {
+    /* стили для отключенной кнопки */
+}
+
+.action {
+    /* стили для действия */
 }
 
 .red {
+    /* стили для красной кнопки */
 }
 
-.default:hover {
-}
-
-.red:hover {
-}
-
-.secondary:hover {
-}
-
-
-.default:active {
-}
-
-.secondary:active {
-}
-
-.red:active {
-}
-
-.button:disabled {
+.secondary {
+    /* стили для вторичной кнопки */
 }
