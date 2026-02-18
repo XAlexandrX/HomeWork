@@ -19,9 +19,9 @@ const HW13 = () => {
     const [text, setText] = useState('')
     const [info, setInfo] = useState('')
     const [image, setImage] = useState('')
-    const [loading, setLoading] = useState(false)
 
     const send = (x?: boolean | null) => () => {
+
         const url =
             x === null
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
@@ -31,22 +31,37 @@ const HW13 = () => {
         setImage('')
         setText('')
         setInfo('...loading')
-        setLoading(true)
 
         axios
             .post(url, {success: x})
             .then((res) => {
                 setCode('Код 200!')
+                setText(res.data.errorText)
                 setImage(success200)
-                setText(res.data.errorText || '')
-                setInfo(res.data.info || '')
-                setLoading(false)
+                setInfo(res.data.info)
+                // дописать
 
             })
             .catch((e) => {
-                setLoading(false)
-
-            })
+                if (e.response.status === 500) {
+                    setCode('Ошибка 500!')
+                    setText(e.response.data.errorText)
+                    setImage(error500)
+                    setInfo(e.response.data.info)
+                } else if (e.response.status === 400) {
+                    setCode('Ошибка 400!')
+                    setText(e.response.data.errorText)
+                    setImage(error400)
+                    setInfo(e.response.data.info)
+                } else {
+                    setCode('Error!')
+                    setText(e.message)
+                    setImage(errorUnknown)
+                    setInfo(e.name)
+                }
+            }).finally(() => {
+            // setInfo('')
+        })
     }
 
     return (
@@ -58,8 +73,9 @@ const HW13 = () => {
                     <SuperButton
                         id={'hw13-send-true'}
                         onClick={send(true)}
+                        disabled={info === '...loading'}
                         xType={'secondary'}
-                        disabled={loading}
+                        // дописать
 
                     >
                         Send true
@@ -67,8 +83,9 @@ const HW13 = () => {
                     <SuperButton
                         id={'hw13-send-false'}
                         onClick={send(false)}
+                        disabled={info === '...loading'}
                         xType={'secondary'}
-                        disabled={loading}
+                        // дописать
 
                     >
                         Send false
@@ -76,8 +93,9 @@ const HW13 = () => {
                     <SuperButton
                         id={'hw13-send-undefined'}
                         onClick={send(undefined)}
+                        disabled={info === '...loading'}
                         xType={'secondary'}
-                        disabled={loading}
+                        // дописать
 
                     >
                         Send undefined
@@ -85,8 +103,9 @@ const HW13 = () => {
                     <SuperButton
                         id={'hw13-send-null'}
                         onClick={send(null)} // имитация запроса на не корректный адрес
+                        disabled={info === '...loading'}
                         xType={'secondary'}
-                        disabled={loading}
+                        // дописать
 
                     >
                         Send null
